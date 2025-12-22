@@ -15,7 +15,10 @@ class Felinder extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Felinder! A Dating Platform For Cats', style: TextStyle(fontSize: 20)),
+          title: const Text(
+            'Felinder! A Dating Platform For Cats',
+            style: TextStyle(fontSize: 20),
+          ),
           backgroundColor: Color.fromRGBO(255, 105, 180, 1),
           actions: [
             IconButton(
@@ -27,28 +30,26 @@ class Felinder extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            AutoSizeText(
+        body: SafeArea(
+          child: Container(
+            width: 300.0,
+            height: 300.0,
+            child: AutoSizeText(
               'Felinder',
 
-              style: TextStyle(
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineLarge
+                  ?.copyWith(
                 fontFamily: 'Pacifico',
-                color: Color.fromRGBO(255, 105, 180, 1),
-                fontSize: 48,
+                color: const Color.fromRGBO(255, 105, 180, 1),
               ),
-
               maxLines: 1,
-              minFontSize: 20,
+              textAlign: TextAlign.center,
+              minFontSize: 50,
+              maxFontSize: 70,
             ),
-            Image(
-              //image: AssetImage('images/happy-tabby-cat.png'),
-              alignment: Alignment.centerRight,
-              image: NetworkImage(
-                "https://paradepets.com/.image/c_fill,w_1200,h_1200,g_faces:center/NTowMDAwMDAwMDAwMDI4ODAw/shutterstock_2502425875.jpg",
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
