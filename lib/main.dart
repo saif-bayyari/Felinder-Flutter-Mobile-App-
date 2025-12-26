@@ -31,24 +31,25 @@ class Felinder extends StatelessWidget {
           ],
         ),
         body: SafeArea(
-          child: Container(
-            width: 300.0,
-            height: 300.0,
-            child: AutoSizeText(
-              'Felinder',
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [Center(
+              child: AutoSizeText(
+                'Felinder',
 
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineLarge
-                  ?.copyWith(
-                fontFamily: 'Pacifico',
-                color: const Color.fromRGBO(255, 105, 180, 1),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge
+                    ?.copyWith(
+                  fontFamily: 'Pacifico',
+                  color: const Color.fromRGBO(255, 105, 180, 1),
+                ),
+                maxLines: 1,
+                minFontSize: 70,
+                maxFontSize: 120,
               ),
-              maxLines: 1,
-              textAlign: TextAlign.center,
-              minFontSize: 50,
-              maxFontSize: 70,
-            ),
+            ),]
           ),
         ),
       ),
