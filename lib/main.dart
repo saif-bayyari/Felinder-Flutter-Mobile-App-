@@ -31,17 +31,14 @@ class Felinder extends StatelessWidget {
           ],
         ),
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [Center(
+          child: Container(
+            margin: EdgeInsets.all(25.0),
+            //margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0)
+            child: Center(
               child: AutoSizeText(
                 'Felinder',
 
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineLarge
-                    ?.copyWith(
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   fontFamily: 'Pacifico',
                   color: const Color.fromRGBO(255, 105, 180, 1),
                 ),
@@ -49,7 +46,7 @@ class Felinder extends StatelessWidget {
                 minFontSize: 70,
                 maxFontSize: 120,
               ),
-            ),]
+            ),
           ),
         ),
       ),
