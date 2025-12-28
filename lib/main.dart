@@ -32,15 +32,17 @@ class Felinder extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+
+              //main axis alignment basically is saying "where does the column start attaching things relative to?"
+              //mainAxisAlignment: MainAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               verticalDirection: VerticalDirection.up,
               //mainAxisSize: MainAxisSize.min,
               children: [
 
+                Container(width: 100, height: 100, color: Colors.red),
                 Container(width: 100, height: 100, color: Colors.green),
-                Container(width: 100, height: 100, color: Colors.green),
-                Container(width: 100, height: 100, color: Colors.green),
+                Container(width: 100, height: 100, color: Colors.yellow),
                 Center(
                 child: AutoSizeText(
                   'Felinder',
