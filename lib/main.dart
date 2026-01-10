@@ -56,48 +56,51 @@ class Felinder extends StatelessWidget {
 
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Column(
-                  children: [
-                    ListTile(
-                      titleAlignment: ListTileTitleAlignment.center,
-                      leading:Icon(Icons.phone, color: Colors.teal),
-                      title:
-                      TextButton(
-                        child: const Text('SIGN IN WITH PHONE NUMBER'),
-                        onPressed: () {
-                          // Action for the first button
-                          print("test");
-                        },
-                      ),
-                    ),
-                    ListTile(
-                      titleAlignment: ListTileTitleAlignment.center,
-                      leading:
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          height: 25,
-                          child: Image.asset("lib/icons/google-color-icon.png"),
+                  child: ListTile(
+                          titleAlignment: ListTileTitleAlignment.center,
+                          leading:Icon(Icons.phone, color: Colors.teal),
+                          title:
+                          TextButton(
+                            child: const Text('SIGN IN WITH PHONE NUMBER'),
+                            onPressed: () {
+                              // Action for the first button
+                              print("test");
+                            },
+                          ),
                         ),
-                      )
-                      
-                      ,
-                      title:
-                      TextButton(
-                        child: const Text('SIGN IN WITH GOOGLE'),
-                        onPressed: () {
-                          // Action for the first button
-                          print("test");
-                        },
+              ),
+
+
+                    Card(
+                      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                      child: ListTile(
+                        titleAlignment: ListTileTitleAlignment.center,
+                        leading:
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Container(
+                            height: 25,
+                            child: Image.asset("lib/icons/google-color-icon.png"),
+                          ),
+                        )
+                        
+                        ,
+                        title:
+                        TextButton(
+                          child: const Text('SIGN IN WITH GOOGLE'),
+                          onPressed: () {
+                            // Action for the first button
+                            print("test");
+                          },
+                        ),
                       ),
                     ),
 
                   ],
                 ),
+
+
               ),
-            ],
-          ),
-        ),
       ),
     );
   }
