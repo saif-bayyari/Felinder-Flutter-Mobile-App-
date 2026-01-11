@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
+import '../custom_widgets/social_sign_in_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,37 +45,17 @@ class HomeScreen extends StatelessWidget {
                   )
               ),
             ),
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              child: ListTile(
-                titleAlignment: ListTileTitleAlignment.center,
-                leading: Icon(Icons.phone, color: Colors.teal),
-                title: TextButton(
-                  child: const Text('SIGN IN WITH PHONE NUMBER'),
-                  onPressed: () {
-                    Navigator.pushNamed(context, Routes.phoneInput);
-                  },
-                ),
-              ),
+            SocialSignInCard(
+              method: SignInMethod.phone,
+              onPressed: (){
+                Navigator.pushNamed(context, Routes.phoneInput);
+              }
             ),
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              child: ListTile(
-                titleAlignment: ListTileTitleAlignment.center,
-                leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Container(
-                    height: 25,
-                    child: Image.asset("lib/icons/google-color-icon.png"),
-                  ),
-                ),
-                title: TextButton(
-                  child: const Text('SIGN IN WITH GOOGLE'),
-                  onPressed: () {
-                    print("test");
-                  },
-                ),
-              ),
+            SocialSignInCard(
+              method: SignInMethod.google,
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.googleInput);
+              }
             ),
           ],
         ),
