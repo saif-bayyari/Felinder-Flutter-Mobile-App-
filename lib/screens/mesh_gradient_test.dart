@@ -9,7 +9,6 @@ class MeshGradientTest extends StatefulWidget {
   State<MeshGradientTest> createState() => _MeshGradientTestState();
 }
 
-
 class _MeshGradientTestState extends State<MeshGradientTest> {
   double _size = 1.0;
 
@@ -19,48 +18,58 @@ class _MeshGradientTestState extends State<MeshGradientTest> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        children: [MeshGradient(
-          points: [
-            MeshGradientPoint(
-              position: const Offset(
-                0.2,
-                0.6,
+    return Scaffold(  // Add Scaffold for proper structure
+      body: Column(
+        children: [
+          Expanded(  // Use Expanded to give it available space
+            child: Container(  // Wrap in Container
+              width: double.infinity,  // Full width
+              child: MeshGradient(
+                points: [
+                  MeshGradientPoint(
+                    position: const Offset(
+                      0.2,
+                      0.6,
+                    ),
+                    color: const Color.fromARGB(255, 251, 0, 105),
+                  ),
+                  MeshGradientPoint(
+                    position: const Offset(
+                      0.4,
+                      0.5,
+                    ),
+                    color: const Color.fromARGB(255, 69, 18, 255),
+                  ),
+                  MeshGradientPoint(
+                    position: const Offset(
+                      0.7,
+                      0.4,
+                    ),
+                    color: const Color.fromARGB(255, 0, 255, 198),
+                  ),
+                  MeshGradientPoint(
+                    position: const Offset(
+                      0.4,
+                      0.9,
+                    ),
+                    color: const Color.fromARGB(255, 64, 255, 0),
+                  ),
+                ],
+                options: MeshGradientOptions(),
               ),
-              color: const Color.fromARGB(255, 251, 0, 105),
             ),
-            MeshGradientPoint(
-              position: const Offset(
-                0.4,
-                0.5,
-              ),
-              color: const Color.fromARGB(255, 69, 18, 255),
-            ),
-            MeshGradientPoint(
-              position: const Offset(
-                0.7,
-                0.4,
-              ),
-              color: const Color.fromARGB(255, 0, 255, 198),
-            ),
-            MeshGradientPoint(
-              position: const Offset(
-                0.4,
-                0.9,
-              ),
-              color: const Color.fromARGB(255, 64, 255, 0),
-            ),
-          ],
-          options: MeshGradientOptions(),
-        ),
-          ElevatedButton(
-            onPressed: () {
-              // Navigate back to first route when tapped.
-              Navigator.pop(context);
-            },
-            child: const Text('Go back!'),
           ),
-    ]
+          Padding(  // Add some padding for the button
+            padding: const EdgeInsets.all(20.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
