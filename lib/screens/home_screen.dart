@@ -12,33 +12,22 @@ class HomeScreen extends StatelessWidget {
 
     // Return just the Scaffold, not MaterialApp
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          '',
-          style: TextStyle(fontSize: 20),
-        ),
-        backgroundColor: Color.fromRGBO(255, 105, 180, 1),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-              print("hello saif");
-            },
-          ),
-        ],
-      ),
+     // appBar: AppBar(
+       // backgroundColor: Color.fromRGBO(255, 105, 180, 1),
+      //),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
+            //TODO: eventually we are gonna have to just design a logo in photoshop instead of hardcoding one with flutter widgets
             Center(
               child: Text(
                   'Felinder',
                   style: TextStyle(
                       fontSize: 40,
-                      color: Colors.pinkAccent,
+                      color: Color.fromRGBO(255, 105, 180, 1),
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.5,
                       fontFamily: "Pacifico"

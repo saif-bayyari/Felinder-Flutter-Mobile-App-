@@ -14,6 +14,8 @@ class Felinder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Felinder',
+      debugShowCheckedModeBanner: false,
       initialRoute: Routes.home,
       routes: Routes.getRoutes(),
     );
