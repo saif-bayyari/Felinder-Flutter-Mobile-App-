@@ -46,6 +46,11 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, Routes.googleInput);
               }
             ),
+           SocialSignInCard(method: SignInMethod(buttonText: "Mesh Gradient Test", iconBuilder: () => Icon(Icons.scatter_plot_outlined)),
+             onPressed: (){
+                Navigator.pushNamed(context, Routes.meshGradientTest);
+             }),
+
           ],
         ),
       ),
