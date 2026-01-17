@@ -28,10 +28,10 @@ class _MeshGradientTestState extends State<MeshGradientTest> {
                 points: [
                   MeshGradientPoint(
                     position: const Offset(
-                      0.2,
-                      0.6,
+                      0.5,
+                      0.5,
                     ),
-                    color: const Color.fromARGB(255, 251, 0, 105),
+                    color: const Color.fromRGBO(255, 105, 180, 1),
                   ),
                   MeshGradientPoint(
                     position: const Offset(
@@ -45,17 +45,17 @@ class _MeshGradientTestState extends State<MeshGradientTest> {
                       0.7,
                       0.4,
                     ),
-                    color: const Color.fromARGB(255, 0, 255, 198),
+                    color: Colors.pink
                   ),
                   MeshGradientPoint(
                     position: const Offset(
                       0.4,
                       0.9,
                     ),
-                    color: const Color.fromARGB(255, 64, 255, 0),
+                    color: Colors.pinkAccent,
                   ),
                 ],
-                options: MeshGradientOptions(),
+                options: MeshGradientOptions(blend: 7),
               ),
             ),
           ),

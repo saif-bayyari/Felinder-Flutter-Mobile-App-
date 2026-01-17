@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
 import '../custom_widgets/social_sign_in_card.dart';
+import '../services/api_service.dart';
+import '../models/user.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -50,6 +52,31 @@ class HomeScreen extends StatelessWidget {
              onPressed: (){
                 Navigator.pushNamed(context, Routes.meshGradientTest);
              }),
+
+            SocialSignInCard(method: SignInMethod(buttonText: "Backend Test", iconBuilder: () => Icon(Icons.plus_one)),
+                onPressed: () async{
+                    final api = ApiService();
+
+                    // First test: can we reach the server?
+                    final isConnected = await api.ping();
+                    print('Connected: $isConnected');
+
+                    // Second test: try creating a user
+                    final testUser = User(
+                      id: 'test-123',
+                      email: 'test@example.com',
+                      firstName: 'Test',
+                      lastName: 'User',
+                      createdAt: DateTime.now(),
+                      role: UserRole.user,
+                    );
+
+                    final result = await api.createUser(testUser);
+                    if (result != null) {
+                      print('Success! Got back user: ${result.fullName}');
+                    }
+                }
+                 ),
 
           ],
         ),
