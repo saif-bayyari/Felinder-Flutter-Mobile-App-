@@ -4,41 +4,28 @@ import 'package:http/http.dart' as http;
 import '../models/user.dart';
 
 class ApiService {
-  // Change this to your actual backend URL
-  // For local development:
-  // - Android emulator: 10.0.2.2:8080
-  // - iOS simulator: localhost:8080
-  // - Real device: your computer's IP address
-  final String baseUrl = 'http://10.0.2.2:8080';
+  // Paste your RequestBin URL here
+  final String baseUrl = 'https://eocve3jve6ye1g2.m.pipedream.net'; // <-- YOUR URL
 
-  // Test POST - Create a user
-  Future<User?> createUser(User user) async {
+  Future<bool> testCreateUser(User user) async {
     try {
+      final jsonData = user.toJson();
+
+      print('Sending: $jsonData');  // See what you're sending
+
       final response = await http.post(
-        Uri.parse('$baseUrl/users'),
+        Uri.parse(baseUrl),
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode(user.toJson()),
+        body: jsonEncode(jsonData),
       );
 
       print('Status: ${response.statusCode}');
-      print('Response: ${response.body}');
 
-      if (response.statusCode == 200 || response.statusCode == 201) {
-        return User.fromJson(jsonDecode(response.body));
-      }
+      // RequestBin returns 200 if it received your request
+      return response.statusCode == 200;
+
     } catch (e) {
       print('Error: $e');
-    }
-    return null;
-  }
-
-  // Test GET - Simple ping
-  Future<bool> ping() async {
-    try {
-      final response = await http.get(Uri.parse('$baseUrl/health'));
-      return response.statusCode == 200;
-    } catch (e) {
-      print('Ping failed: $e');
       return false;
     }
   }
