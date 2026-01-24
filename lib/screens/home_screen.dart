@@ -74,9 +74,9 @@ class HomeScreen extends StatelessWidget {
                   role: UserRole.user,
                 );
 
-                final success = await api.testCreateUser(testUser);
+                final success = await api.createUser(testUser);
 
-                if (success) {
+                if (success == true) {
                   print('Request sent! Check RequestBin to see it.');
                 } else {
                   print('Something went wrong.');
