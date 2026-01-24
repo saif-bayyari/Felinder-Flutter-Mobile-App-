@@ -1,4 +1,4 @@
-# Felinder
+# Felinder - **DEV ENVIRONMENT**, WHERE IM MAKING FREQUENT UPDATES AND TESTING NEW FEATURES 
 
 Cross-platform Dating Mobile App - For Felines (aka, For Cats)
 
