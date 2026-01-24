@@ -1,6 +1,6 @@
 # Felinder
 
-Cross-platform Dating Mobile App - For Felines (aka, Cats)
+Cross-platform Dating Mobile App - For Felines (aka, For Cats)
 
 ## Brief Intro/Summary
 
