@@ -1,16 +1,10 @@
-# i_am_rich
+# Felinder - **DEV ENVIRONMENT**, WHERE IM MAKING FREQUENT UPDATES AND TESTING NEW FEATURES 
 
-A new Flutter project.
+Cross-platform Dating Mobile App - For Felines (aka, For Cats)
 
-## Getting Started
+## Brief Intro/Summary
 
-This project is a starting point for a Flutter application.
+- Written primarily in flutter using standard Material Design pattern, 
+- Connected currently with a Python-written backend using FastAPI, Pydantic, and Uvicorn.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A concept only, not really an actual draft for a startup (it could be though in the future).
