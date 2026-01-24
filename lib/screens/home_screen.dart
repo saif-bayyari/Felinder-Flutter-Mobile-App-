@@ -3,6 +3,10 @@ import '../routes.dart';
 import '../custom_widgets/social_sign_in_card.dart';
 import '../services/api_service.dart';
 import '../models/user.dart';
+import 'package:uuid/uuid.dart';
+
+
+final uuid = Uuid();
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -66,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                 final api = ApiService();
 
                 final testUser = User(
-                  id: 'test-123',
+                  id:  uuid.v4(),
                   email: 'test@example.com',
                   firstName: 'John',
                   lastName: 'Doe',

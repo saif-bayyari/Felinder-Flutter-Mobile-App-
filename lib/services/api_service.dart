@@ -5,7 +5,12 @@ import '../models/user.dart';
 
 
 class ApiService {
-  final String baseUrl = 'http://localhost:8080';
+
+  //THIS IS HOW YOU PROPERLY WRITE THE SERVER  ENDPOINT:
+  //HTTP://LOCALHOST:[PORT NUMBER}
+  //That's it. Do not put a slash after the number.
+  //Note: localhost is for ios simulator environments, android uses a different ip addr
+  final String baseUrl = 'http://localhost:8000';
 
   Future<User?> createUser(User user) async {
     try {
