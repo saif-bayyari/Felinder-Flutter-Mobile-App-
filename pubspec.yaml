@@ -18,6 +18,8 @@ dependencies:
   uuid: ^4.2.1
 
   cupertino_icons: ^1.0.8
+  form_builder_validators: ^11.2.0
+  mask_text_input_formatter: ^2.9.0
 
 dev_dependencies:
   flutter_test:

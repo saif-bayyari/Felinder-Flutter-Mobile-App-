@@ -26,7 +26,16 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            //TODO: eventually we are gonna have to just design a logo in photoshop instead of hardcoding one with flutter widgets
+
+            Center(child: Image(image: AssetImage(""
+                "images/Felinder_Logo.png")
+
+              ,
+
+             width: 150,    height: 150, )
+
+              ,),
+            //TODO: eventually we are gonna have to just design the logo text in photoshop instead of hardcoding one with flutter widgets
             Center(
               child: Text(
                 'Felinder',
